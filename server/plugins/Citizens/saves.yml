@@ -1,0 +1,58 @@
+# Citizens NPC Storage
+
+last-created-npc-id: 3
+npc:
+  '2':
+    metadata:
+      cached-skin-uuid-name: f4e24066-c1f3-4b80-b948-80647091968b
+    name: 상점
+    uuid: 7ca47d7d-d145-4788-9a35-a99c5c0ecee4
+    traits:
+      type: PLAYER
+      location:
+        bodyYaw: 0.0
+        world: world
+        x: -93.5
+        y: 81.0
+        z: 611.5
+        yaw: 0.0
+        pitch: 0.0
+      skintrait:
+        signature: MCCbfUytNaEv7qXeVoVJmkiPDIQ3Xxtkl0yJ8QO9g+0+ZkEvnIAu7oY3j+plp7UIz3MD85oYPNzbBeoPvjjfQCEtHefXfYxqPo7l2IXzh+eiPArJ+BGHrDSu+nf3KYIZOULBO6e+/Pcu9m5puOh3uiSewhnLN3xV7XdSSvLM+9xNUUdGPfV7B/25Go+mCsHM3KwByS5iDwVglo4DP6cy1JRfAU7yvLFiebwCtxWpvpELaHPwXh4GIen69rKZld7Fk8L57FzooSxyOhCgz0BldigMyrJeBB24ntIpEIXg3XloQl3BrrPCE5b5lGoLzxDUtOOYkitBitmzd+Kgz7/Q3KiJcngJzgzvmGz8867qPxlmqQuUbrrrzlpvugz36Zw3x7GqXCUl+UkesSLnIu1159AmSACBHj4fF/+2NhfPT880GQuarUxD0rC70PGDh43YB5gfGP/8Nk3uT3KVhNldgPS9abh2XicgBAep/9YbBCIjiiG1dR8DB/7bcPqRs2uAPg5aNd6C7nNdJyAK+PRyQ5NmCda1nAkKKJkk/ALmcazMclz1P/Xg7xT5kRWLOX0tOOxNnh1NPg9E1iD6Ebhd874H0Er2/s4RxCqClmbw7D1ALmyjIXOxMk1tbYaxm/JJZNk6BWOQ5iTln75ikorlnaZDjnHnvmvKe3gGTpFh3X4=
+        skinName: f4e24066-c1f3-4b80-b948-80647091968b
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc0NTU2MzM2OTA2NiwKICAicHJvZmlsZUlkIiA6ICI3Mjc2ZThmYzVkNjE0ODNjYmMwN2IxYjIzNjI3MDA4ZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJXYWJvV2ViaSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS8xY2RkMzg3MDk0MWY1NWFiNjRhOTE1MzEyZDFjNWE2NjM1NzRmNWEzMjc4YTI0MDRhNDUzODJiY2YwZmE5MGY0IgogICAgfQogIH0KfQ==
+      owner:
+        uuid: 76cdc947-3598-4f9c-9b9c-c44f7dfd05b5
+      spawned: true
+    traitnames: type,spawned,scoreboardtrait,location,inventory,owner,skintrait
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+  '3':
+    metadata:
+      cached-skin-uuid-name: 9b48f5f5-f82a-4299-9f44-599bada9a14a
+    name: 도박
+    uuid: ea75463a-8600-4a94-b39a-33452c069679
+    traits:
+      type: PLAYER
+      location:
+        bodyYaw: 0.32559967
+        world: world
+        x: -97.4997
+        y: 81.0
+        z: 611.5125
+        yaw: 0.3256
+        pitch: 0.0
+      skintrait:
+        signature: g+Jqkfs6vntc6WX6R/JZnQT4NHgEONyBZFL/yQ2tqO3mUsZ0F65pRZIQ7i9ttQbvLMS1mx9GXQkU+2tkIYNLLjeYI9NrDnYFfySdbXgjEnDOfBRX5HAnWlNMbQNQeL/0aNOWA4VzMu+FOGlX8mZj8EiN0wqiUCi8QnWQsX+nCNJxTfFTU3c7QGv412IBknEkPpauSaCxMdZdy8O4Q0W6xquWNTX+KUb1cg960b/8Jt76opu4IT7cX70dCCIg9IqkP81+zqjujbiIl32F5YJYa5MQs9j08Du5N3tjIo0r9yLT60hGAzeUpw8ccDVJEvYOgaBd1y9kUph2TimLI6MuoXcGBJOwYA6yxshDTamWcCcv2/UejkHpehLVwiFbBQ/gWlBwYPYBuQcpfFvZY/Ki0oWOPrMyjnUksIIojyg6DrOGvSVfzvYfjfKfxxRBNPkhkFkBPqFpcjP1Ea108nZxjTGjjAdSl2d/H/Cb9O6KvI/ymWRSMaTijh5TZciJq2qYop+HEERTMaYacQaDPelqonAlGSROCcv1acR3SAkj4H6rhWL1MYyiTcwiYUJUse7M3sexizUjZIm2jzn5A0CrZocaLVS3izTAIqfbFpX80gWCqZdYlbsKAEn0q/jaUqvejlVnU5u+evJgRMdm0Wi4jdODgTRpbBixZG88rl6ESko=
+        skinName: 9b48f5f5-f82a-4299-9f44-599bada9a14a
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTYzNjA0MDU5Mjg0NCwKICAicHJvZmlsZUlkIiA6ICIyNzZlMDQ2YjI0MDM0M2VkOTk2NmU0OTRlN2U2Y2IzNCIsCiAgInByb2ZpbGVOYW1lIiA6ICJBRFJBTlM3MTAiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzU3OTQ4Y2U4NjQwOGJhMGNlZmYzZjEwNGIwM2U2NTY3YjBhYjA3ZjUyYzhkMjYxYzlhNjg5M2Q1ZDkyYTM2NiIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9
+      owner:
+        uuid: 76cdc947-3598-4f9c-9b9c-c44f7dfd05b5
+      spawned: true
+    traitnames: type,spawned,scoreboardtrait,rotationtrait,location,inventory,owner,skintrait
+    navigator:
+      speedmodifier: 5.0
+      avoidwater: false
+      usedefaultstuckaction: false

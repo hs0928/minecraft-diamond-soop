@@ -1,0 +1,9 @@
+items:
+  icon cancel: _iainternal:icon_cancel
+  icon back orange: _iainternal:icon_back_orange
+  icon arrow chest: _iainternal:icon_arrow_chest
+  save: ab:save
+  icon right blue: _iainternal:icon_right_blue
+  icon search: _iainternal:icon_search
+  icon left blue: _iainternal:icon_left_blue
+  icon next orange: _iainternal:icon_next_orange

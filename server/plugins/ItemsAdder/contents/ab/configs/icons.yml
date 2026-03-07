@@ -1,0 +1,11 @@
+info:
+  namespace: ab
+items:
+  save:
+    enabled: true
+    display_name: 인벤세이브권
+    resource:
+      material: PAPER
+      generate: true
+      textures:
+        - item/save

@@ -1,0 +1,465 @@
+command 별풍선 [<player>] [<integer>]:
+    trigger:
+        if arg-integer is 5000:
+            play sound "block.anvil.place" to arg-player
+            set {_rda} to random integer between 1 and 10
+            add {_rda} to {다이아갯수::%uuid of arg-player%}
+            send "&e별풍선 &950&e개를 후원받아 &b다이아몬드 &e%{_rda}%개가 추가되었습니다" to arg-player
+        if arg-integer is 50000:
+            play sound "block.anvil.place" to arg-player
+            set {_rda} to random integer between 10 and 30
+            add {_rda} to {다이아갯수::%uuid of arg-player%}
+            send "&e별풍선 &9500&e개를 후원받아 &b다이아몬드 &e%{_rda}%개가 추가되었습니다" to arg-player
+        if arg-integer is 5100:
+            play sound "entity.player.levelup" with pitch 2 to arg-player
+            set {_rda} to random integer between 1 and 10
+            remove {_rda} from {다이아갯수::%uuid of arg-player%}
+            send "&e별풍선 &951&e개를 후원받아 &b다이아몬드 &e%{_rda}%개가 차감되었습니다" to arg-player
+        if arg-integer is 50100:
+            play sound "entity.player.levelup" with pitch 2 to arg-player
+            set {_rda} to random integer between 10 and 30
+            remove {_rda} from {다이아갯수::%uuid of arg-player%}
+            send "&e별풍선 &9501&e개를 후원받아 &b다이아몬드 &e%{_rda}%개가 차감되었습니다" to arg-player
+        if arg-integer is 44400:
+            play sound "block.anvil.place" to arg-player
+            set {_r} to random integer between 1 and 100
+            if {_r} is between 1 and 13:
+                apply blindness 1 to arg-player for 5 seconds
+                send "%nl% &b별풍선 &e444&f개를 후원받아 &8실명 &e5초&f에 걸렸습니다%nl%" to arg-player
+                
+                stop
+            if {_r} is between 14 and 26:
+                apply slowness 2 to arg-player for 5 seconds
+                send "%nl% &b별풍선 &e444&f개를 후원받아 &8구속 &e5초&f에 걸렸습니다%nl%" to arg-player
+                
+                stop
+            if {_r} is between 27 and 39:
+                apply slow falling 1 to arg-player for 5 seconds
+                send "%nl% &b별풍선 &e444&f개를 후원받아 &f느린낙하 &e5초&f에 걸렸습니다%nl%" to arg-player
+                
+                stop
+            if {_r} is between 40 and 52:
+                apply mining fatigue 2 to arg-player for 5 second
+                send "%nl% &b별풍선 &e444&f개를 후원받아 &7채굴피로 &e5초&f에 걸렸습니다%nl%" to arg-player
+                
+                stop
+            if {_r} is between 53 and 65:
+                apply poison 1 to arg-player for 5 second
+                send "%nl% &b별풍선 &e444&f개를 후원받아 &a독 &e5초&f에 걸렸습니다%nl%" to arg-player
+                
+                stop
+            if {_r} is between 66 and 75:
+                set {_mr} to random integer between 1 and 1000
+                if {_mr} is between 1 and 250:
+                    spawn 3 zombie at arg-player
+                    send "%nl% &b별풍선 &e444&f개를 후원받아 &3좀비 3마리&f가 생성되었습니다%nl%" to arg-player
+                    
+                    stop
+                if {_mr} is between 251 and 450:
+                    spawn 3 skeleton at arg-player
+                    send "%nl% &b별풍선 &e444&f개를 후원받아 &7스켈레톤 3마리&f가 생성되었습니다%nl%" to arg-player
+                    
+                    stop
+                if {_mr} is between 451 and 650:
+                    spawn 3 spider at arg-player
+                    send "%nl% &b별풍선 &e444&f개를 후원받아 &8거미 3마리&f가 생성되었습니다%nl%" to arg-player
+                    stop
+                if {_mr} is between 651 and 850:
+                    spawn 2 creeper at arg-player
+                    send "%nl% &b별풍선 &e444&f개를 후원받아 &a크리퍼 2마리&f가 생성되었습니다%nl%" to arg-player
+                    stop
+                if {_mr} is between 851 and 950:
+                    spawn 1 witch at arg-player
+                    send "%nl% &b별풍선 &e444&f개를 후원받아 &d마녀 1마리&f가 생성되었습니다%nl%" to arg-player
+                    stop
+                if {_mr} is between 951 and 1000:
+                    spawn 1 vindicator at arg-player
+                    send "%nl% &b별풍선 &e444&f개를 후원받아 &7변명자 1마리&f가 생성되었습니다%nl%" to arg-player
+                    stop
+            if {_r} is between 76 and 85:
+                while 1 is 1:
+                    set {_px} to arg-player's x-coord
+                    set {_pz} to arg-player's z-coord
+                    set {_x} to random integer between {_px}-500 and {_px}+500
+                    set {_z} to random integer between {_pz}-500 and {_pz}+500
+                    set {_y} to 250
+                    while block at location at {_x}, {_y}, {_z} is air:
+                        remove 1 from {_y}
+                    if block at location at {_x}, {_y}, {_z} is not water:
+                        teleport arg-player to location({_x}+0.5, {_y}+1, {_z}+0.5, world("world")) 
+                        
+                        send "%nl% &b별풍선 &e444&f개를 후원받아 랜덤 좌표로 텔레포트 되었습니다%nl%" to arg-player
+                        stop
+            if {_r} is between 86 and 95:
+                add 1 to {인벤제한::%uuid of arg-player%}
+                set {인벤제한유무::%uuid of arg-player%} to true
+                send "%nl% &b별풍선 &e444&f개를 후원받아 인벤토리 한칸이 금지되었습니다%nl%" to arg-player
+            if {_r} is between 96 and 100:
+                set {_rss} to random integer between 1 and 36
+                set slot {_rss}-1 of inventory of arg-player to air
+                
+                send "%nl% &b별풍선 &e444&f개를 후원받아 인벤토리 한칸에 있던 아이템이 제거되었습니다%nl%" to arg-player
+                stop
+        if arg-integer is 33300:
+            set {_r2} to random integer between 1 and 100
+            if {_r2} is between 1 and 30:
+                apply speed 1 to arg-player for 5 seconds
+                send "%nl% &b별풍선 &e333&f개를 후원받아 &b신속 &e5초&f에 걸렸습니다%nl%" to arg-player
+                play sound "entity.player.levelup" to arg-player
+                stop
+            if {_r2} is between 31 and 60:
+                apply haste 2 to arg-player for 5 seconds
+                send "%nl% &b별풍선 &e333&f개를 후원받아 &e성급함 &e5초&f에 걸렸습니다%nl%" to arg-player
+                play sound "entity.player.levelup" to arg-player
+                stop
+            if {_r2} is between 61 and 90:
+                apply regeneration 1 to arg-player for 5 seconds
+                send "%nl% &b별풍선 &e333&f개를 후원받아 &c재생 &e5초&f에 걸렸습니다%nl%" to arg-player
+                play sound "entity.player.levelup" to arg-player
+                stop
+            if {_r2} is between 91 and 100:
+                set {_rda} to random integer between 1 and 10
+                send "%nl% &b별풍선 &e333&f개를 후원받아 &b다이아몬드 &f%{_rda}%개를 얻으셨습니다%nl%" to arg-player
+                give {_rda} of diamond to arg-player
+                play sound "entity.player.levelup" to arg-player
+                stop
+        if arg-integer is 444400:
+            set {별풍4444::%uuid of arg-player%} to true
+            set {_p} to arg-player's location
+            kill the arg-player
+            send "%nl% &e%arg-player%님이 &b별풍선 &64&f,&e4&24&94&f개를 후원받아 즉사하셨습니다%nl%" to all players
+            play sound "ui.toast.challenge_complete" with volume 1 with pitch 1 to all players
+            create safe explosion of force 5 at {_p}
+            strike lightning effect at {_p}
+            loop 5 times:
+                launch flickering ball large coloured red, green and yellow fading to light green and black at {_p} with duration 4
+                wait 1 tick
+
+every 20 tick:
+    loop all players:
+        if {인벤제한유무::%uuid of loop-player%} is true:
+            delete {인벤제한유무::%uuid of loop-player%}
+            wait 1 tick
+            wait 600 second
+            remove 1 from {인벤제한::%uuid of loop-player%}
+
+every 19 tick:
+    add 0 to {다이아갯수}
+    add 0 to {다이아제출갯수}
+    loop all players:
+        add 0 to {다이아갯수::%uuid of loop-player%}
+        add 0 to {다이아제출갯수::%uuid of loop-player%}
+        #set {다이아보유::%uuid of loop-player%} to amount of diamond in inventory of loop-player
+        wipe loop-player's sidebar
+        set name of sidebar of loop-player to "&e정보"
+        set score "&e캐야하는 다이아 갯수(전체) : %{다이아갯수}-{다이아제출갯수}%" in sidebar of loop-player to 2
+        set score "&e캐야하는 다이아 갯수(개인) : %{다이아갯수::%uuid of loop-player%}-{다이아제출갯수::%uuid of loop-player%}%" in sidebar of loop-player to 3
+        set score "&e보유한 다이아 수 : %amount of diamond in inventory of loop-player%" in sidebar of loop-player to 1
+        set score "&e인벤토리 슬롯제한 : %{인벤제한::%uuid of loop-player%}%" in sidebar of loop-player to 0
+        #delete {lsc}
+        #wait 1 tick
+        #loop size of {관리자제외전체인원::*} times:
+            #add 1 to {lsc}
+            #set score "&e%{관리자제외전체인원::%{lsc}%}%님이 보유한 다이아 수 : %{다이아보유::%uuid of {관리자제외전체인원::%{lsc}%}%}%" in sidebar of loop-player to 0
+
+#every 1 second:
+#    loop all players:
+#        set {다이아보유::%uuid of loop-player%} to amount of diamond in inventory of loop-player
+
+#on pick up of diamond:
+#    wait 1 tick
+#    set {다이아보유::%uuid of player%} to amount of diamond in inventory of player
+
+#on drop of diamond:
+#    wait 1 tick
+#    set {다이아보유::%uuid of player%} to amount of diamond in inventory of player
+
+#on inventory click:
+#    if event-item is diamond:
+#        set {다이아보유::%uuid of player%} to amount of diamond in inventory of player
+
+command z전체다이아제출갯수초기화:
+    trigger:
+        if player is op:
+            delete {다이아제출갯수}
+
+command z개인다이아제출갯수초기화:
+    trigger:
+        if player is op:
+            delete {다이아제출갯수::*}
+
+command z전체다이아갯수초기화:
+    trigger:
+        if player is op:
+            delete {다이아갯수}
+
+command z개인다이아갯수초기화:
+    trigger:
+        if player is op:
+            delete {다이아갯수::*}
+
+command z전체다이아갯수설정 [<integer>]:
+    trigger:
+        if player is op:
+            set {다이아갯수} to arg-integer
+
+on inventory click:
+    if event-item is barrier named "&c잠긴 슬롯":
+        cancel event
+
+command z인벤제한확인 [<player>]:
+    trigger:
+        if player is op:
+            send "%arg-player%님의 인벤제한 : %{인벤제한::%uuid of arg-player%}%" to player
+
+on join:
+    add 0 to {인벤제한::%uuid of player%}
+
+every 1 second:
+    console command "clear @a barrier"
+    console command "kill @e[type=item,nbt={Item:{id:""minecraft:barrier""}}]"
+    loop all players:
+        wait 1 tick
+        set {_limit} to {인벤제한::%uuid of loop-player%}
+        if {_limit} is not 0:
+            loop numbers from 0 to {_limit} - 1:
+                set slot loop-number+9 of loop-player's inventory to barrier named "&c잠긴 슬롯"
+
+on drop:
+    if event-item is barrier:
+        wait 1 tick
+        console command "kill @e[type=item,nbt={Item:{id:""minecraft:barrier""}}]"
+
+on break of any ore:
+    set player's level to player's level + 1
+
+command 다이아제출 [<text>] [<integer>]:
+    trigger:
+        if arg-text is "전체" or "개인":
+            if arg-integer is set:
+                set {_da} to amount of diamond in inventory of player
+                if {_da} >= arg-integer:
+                    if arg-text is "전체":
+                        add arg-integer to {다이아제출갯수}
+                    if arg-text is "개인":
+                        add arg-integer to {다이아제출갯수::%uuid of player%}
+                    send "&e다이아몬드 %arg-integer%개를 제출하였습니다" to player
+                    play sound "entity.player.levelup" with pitch 2 to player
+                    remove arg-integer of diamond from player's inventory
+                else:
+                    send "&c다이아몬드 %arg-integer%개 혹은 그 이상을 보유하고 있지 않습니다" to player
+                    play sound "entity.enderman.teleport" to player
+        else:
+            send "&c명령어사용법 : /다이아제출 [전체/개인] [갯수]" to player
+
+on rightclick on entity:
+    if name of entity is "도박":
+        set {도박창염::%uuid of player%} to true
+        open chest with 3 rows named "도박" to player
+        play sound "entity.experience_orb.pickup" to player
+        set {_s} to 0
+        loop 27 times:
+            set slot {_s} of current inventory of player to light blue stained glass pane named " "
+            add 1 to {_s}
+        set slot 13 of current inventory of player to air
+        set slot 22 of current inventory of player to itemsadder item "_iainternal:icon_right_blue" named "&a도박"
+
+#command 도박:
+#    trigger:
+#        set {도박창염::%uuid of player%} to true
+#        open chest with 3 rows named "도박" to player
+#        play sound "entity.experience_orb.pickup" to player
+#        set {_s} to 0
+#        loop 27 times:
+#            set slot {_s} of current inventory of player to light blue stained glass pane named " "
+#            add 1 to {_s}
+#        set slot 13 of current inventory of player to air
+#        set slot 22 of current inventory of player to itemsadder item "_iainternal:icon_right_blue" named "&a도박"
+
+on inventory close:
+    if {도박창염::%uuid of player%} is true:
+        if slot 13 of current inventory of player is not air:
+            set {_s13i} to slot 13 of current inventory of player
+            give {_s13i} to player
+        delete {도박창염::%uuid of player%}
+
+on inventory click:
+    if inventory name is "도박":
+        if event-item is not diamond:
+            if clicked slot is not air:
+                cancel event
+                if clicked slot is 22:
+                    if clicked inventory is not player's inventory:
+                        if slot 13 of current inventory of player is diamond:
+                            set {도박아이템::%uuid of player%} to slot 13 of current inventory of player
+                            wait 1 tick
+                            set {s2} to 0
+                            loop 6 times:
+                                play sound "entity.experience_orb.pickup" to player
+                                set {s} to 0
+                                loop 27 times:
+                                    set slot {s} of current inventory of player to {유리판%{s2}%} named " "
+                                    set slot 13 of current inventory of player to {도박템%{s2}%}
+                                    add 1 to {s}
+                                add 1 to {s2}
+                                wait 2 tick
+                            wait 1 tick
+                            set {s2} to 0
+                            loop 6 times:
+                                play sound "entity.experience_orb.pickup" to player
+                                set {s} to 0
+                                loop 27 times:
+                                    set slot {s} of current inventory of player to {유리판%{s2}%} named " "
+                                    set slot 13 of current inventory of player to {도박템%{s2}%}
+                                    add 1 to {s}
+                                add 1 to {s2}
+                                wait 3 tick
+                            wait 1 tick
+                            set {s2} to 0
+                            loop 6 times:
+                                play sound "entity.experience_orb.pickup" to player
+                                set {s} to 0
+                                loop 27 times:
+                                    set slot {s} of current inventory of player to {유리판%{s2}%} named " "
+                                    set slot 13 of current inventory of player to {도박템%{s2}%}
+                                    add 1 to {s}
+                                add 1 to {s2}
+                                wait 4 tick
+                            wait 1 tick
+                            delete {도박창염::%uuid of player%}
+                            wait 1 tick
+                            set {_rdbi} to random integer between 1 and 100
+                            if {_rdbi} is between 1 and 70:
+                                send "&c꽝!" to player
+                                play sound "block.anvil.place" to player
+                            if {_rdbi} is between 71 and 90:
+                                send "&a2배!" to player
+                                play sound "entity.experience_orb.pickup" to player
+                                loop 2 times:
+                                    give {도박아이템::%uuid of player%} to player
+                            if {_rdbi} is between 91 and 100:
+                                send "&a3배!" to player
+                                play sound "entity.player.levelup" to player
+                                loop 3 times:
+                                    give {도박아이템::%uuid of player%} to player
+                            wait 1 tick
+                            close player's inventory
+                            delete {도박아이템::%uuid of player%}
+                        else:
+                            send "&c다이아몬드를 넣어주세요" to player
+
+on rightclick on entity:
+    if name of entity is "상점":
+        play sound "entity.experience_orb.pickup" to player
+        open chest with 3 rows named "상점" to player
+        set slot 10 of current inventory of player to itemsadder item "ab:save" with lore "&e비용 : &c레드스톤 &e10개"
+        set slot 11 of current inventory of player to baked potato with lore "&e비용 : &8석탄 &e1개"
+        set slot 13 of current inventory of player to {수선책} with lore "&e비용 : &b다이아몬드 &e20개"
+        set slot 14 of current inventory of player to {효율책} with lore "&e비용 : &b다이아몬드 &e10개"
+        set slot 15 of current inventory of player to {내구책} with lore "&e비용 : &b다이아몬드 &e10개"
+        set slot 16 of current inventory of player to {행운책} with lore "&e비용 : &b다이아몬드 &e10개"
+
+#command 상점:
+#    trigger:
+#        open chest with 3 rows named "상점" to player
+#        set slot 10 of current inventory of player to itemsadder item "ab:save" with lore "&e비용 : &c레드스톤 &e10개"
+#        set slot 11 of current inventory of player to baked potato with lore "&e비용 : &8석탄 &e1개"
+#        set slot 13 of current inventory of player to {수선책} with lore "&e비용 : &b다이아몬드 &e20개"
+#        set slot 14 of current inventory of player to {효율책} with lore "&e비용 : &b다이아몬드 &e10개"
+#        set slot 15 of current inventory of player to {내구책} with lore "&e비용 : &b다이아몬드 &e10개"
+#        set slot 16 of current inventory of player to {행운책} with lore "&e비용 : &b다이아몬드 &e10개"
+
+on inventory click:
+    if inventory name is "상점":
+        cancel event
+        if clicked inventory is not player's inventory:
+            if clicked slot is 10:
+                set {_ra} to amount of redstone in inventory of player
+                if {_ra} >= 10:
+                    give itemsadder item "ab:save" to player
+                    send "&e인벤세이브권을 성공적으로 구매하였습니다" to player
+                    play sound "entity.experience_orb.pickup" to player
+                    remove 10 redstone from player's inventory
+                else:
+                    send "&c인벤세이브권을 구매하기 위한 비용이 부족합니다" to player
+                    play sound "entity.enderman.teleport" to player
+            if clicked slot is 11:
+                set {_ca} to amount of coal in inventory of player
+                if {_ca} >= 1:
+                    give baked potato to player
+                    send "&e구운감자를 성공적으로 구매하였습니다" to player
+                    play sound "entity.experience_orb.pickup" to player
+                    remove 1 coal from player's inventory
+                else:
+                    send "&c구운감자를를 구매하기 위한 비용이 부족합니다" to player
+                    play sound "entity.enderman.teleport" to player
+            if clicked slot is 13:
+                set {_da} to amount of diamond in inventory of player
+                if {_da} >= 20:
+                    give {수선책} to player
+                    send "&e인첸트북을 성공적으로 구매하였습니다" to player
+                    play sound "entity.experience_orb.pickup" to player
+                    remove 20 diamond from player's inventory
+                else:
+                    send "&c인첸트북을 구매하기 위한 비용이 부족합니다" to player
+                    play sound "entity.enderman.teleport" to player
+            if clicked slot is 14:
+                set {_da} to amount of diamond in inventory of player
+                if {_da} >= 10:
+                    give {효율책} to player
+                    send "&e인첸트북을 성공적으로 구매하였습니다" to player
+                    play sound "entity.experience_orb.pickup" to player
+                    remove 20 diamond from player's inventory
+                else:
+                    send "&c인첸트북을 구매하기 위한 비용이 부족합니다" to player
+                    play sound "entity.enderman.teleport" to player
+            if clicked slot is 15:
+                set {_da} to amount of diamond in inventory of player
+                if {_da} >= 10:
+                    give {내구책} to player
+                    send "&e인첸트북을 성공적으로 구매하였습니다" to player
+                    play sound "entity.experience_orb.pickup" to player
+                    remove 20 diamond from player's inventory
+                else:
+                    send "&c인첸트북을 구매하기 위한 비용이 부족합니다" to player
+                    play sound "entity.enderman.teleport" to player
+            if clicked slot is 16:
+                set {_da} to amount of diamond in inventory of player
+                if {_da} >= 10:
+                    give {행운책} to player
+                    send "&e인첸트북을 성공적으로 구매하였습니다" to player
+                    play sound "entity.experience_orb.pickup" to player
+                    remove 20 diamond from player's inventory
+                else:
+                    send "&c인첸트북을 구매하기 위한 비용이 부족합니다" to player
+                    play sound "entity.enderman.teleport" to player
+
+on death of player:
+    if {별풍4444::%uuid of victim%} is not true:
+        if victim has itemsadder item "ab:save":
+            keep inventory
+            cancel drops
+            remove itemsadder item "ab:save" from victim's inventory
+    wait 5 tick
+    delete {별풍4444::%uuid of victim%}
+
+command 귀환:
+    trigger:
+        set {_spawn} to location at -99.5, 79, 665.5 in world "world"
+        set pitch of {_spawn} to 0
+        set yaw of {_spawn} to 90
+        teleport player to {_spawn}
+        #teleport player to location at -99.5, 79, 665.5 in world "world"
+
+on first join:
+    wait 10 tick
+    set {_spawn} to location at -99.5, 79, 665.5 in world "world"
+    set pitch of {_spawn} to 0
+    set yaw of {_spawn} to 90
+    teleport player to {_spawn}
+    console command "spawnpoint %player% -99.5 79 665.5"
+
+command 공지 [<text>]:
+    trigger:
+        if player is op:
+            send "%nl%&7&l<&e &l공지 &7&l> &r&e%arg-text%%nl%" to all players
