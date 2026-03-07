@@ -1,0 +1,245 @@
+{
+  "version": "1.0.0",
+  "rss": "<LINK TO RSS FEED>",
+  "discord": {
+    "clientId": "<FILL IN OR REMOVE DISCORD OBJECT>",
+    "smallImageText": "<FILL IN OR REMOVE DISCORD OBJECT>",
+    "smallImageKey": "<FILL IN OR REMOVE DISCORD OBJECT>"
+  },
+  "servers": [
+    {
+      "id": "mouth-1.21.3",
+      "name": "mouth (Minecraft 1.21.3)",
+      "description": "mouth Running Minecraft 1.21.3 (Fabric v0.16.13)",
+      "icon": null,
+      "version": "1.0.0",
+      "address": "pixelup.r-e.kr",
+      "minecraftVersion": "1.21.3",
+      "discord": {
+        "shortId": "<FILL IN OR REMOVE DISCORD OBJECT>",
+        "largeImageText": "<FILL IN OR REMOVE DISCORD OBJECT>",
+        "largeImageKey": "<FILL IN OR REMOVE DISCORD OBJECT>"
+      },
+      "mainServer": true,
+      "autoconnect": true,
+      "modules": [
+        {
+          "id": "net.fabricmc:fabric-loader:0.16.13",
+          "name": "Fabric (fabric-loader)",
+          "type": "Fabric",
+          "artifact": {
+            "size": 1387633,
+            "MD5": "5cffbeb4848a035ce735295b1cc0e7fa",
+            "url": "https://glape3333.github.io/mouth/repo/lib/net/fabricmc/fabric-loader/0.16.13/fabric-loader-0.16.13.jar"
+          },
+          "subModules": [
+            {
+              "id": "1.21.3-fabric-0.16.13",
+              "name": "Fabric (version.json)",
+              "type": "VersionManifest",
+              "artifact": {
+                "size": 2859,
+                "MD5": "05f5f170f7f9f1c220f4be72adcfcee9",
+                "url": "https://glape3333.github.io/mouth/repo/versions/1.21.3-fabric-0.16.13/1.21.3-fabric-0.16.13.json"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm:9.7.1",
+              "name": "Fabric (asm)",
+              "type": "Library",
+              "artifact": {
+                "size": 126093,
+                "MD5": "e2cdd32d198ad31427d298eee9d39d8d",
+                "url": "https://glape3333.github.io/mouth/repo/lib/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-analysis:9.7.1",
+              "name": "Fabric (asm-analysis)",
+              "type": "Library",
+              "artifact": {
+                "size": 35126,
+                "MD5": "4cd9e7178dfb85371bba3077e40cd514",
+                "url": "https://glape3333.github.io/mouth/repo/lib/org/ow2/asm/asm-analysis/9.7.1/asm-analysis-9.7.1.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-commons:9.7.1",
+              "name": "Fabric (asm-commons)",
+              "type": "Library",
+              "artifact": {
+                "size": 73459,
+                "MD5": "8344aea3c8b7d707e9d35a62710e77c9",
+                "url": "https://glape3333.github.io/mouth/repo/lib/org/ow2/asm/asm-commons/9.7.1/asm-commons-9.7.1.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-tree:9.7.1",
+              "name": "Fabric (asm-tree)",
+              "type": "Library",
+              "artifact": {
+                "size": 51939,
+                "MD5": "e85029f613b6469989cc7cf53fe06b74",
+                "url": "https://glape3333.github.io/mouth/repo/lib/org/ow2/asm/asm-tree/9.7.1/asm-tree-9.7.1.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-util:9.7.1",
+              "name": "Fabric (asm-util)",
+              "type": "Library",
+              "artifact": {
+                "size": 94519,
+                "MD5": "36d373a9cd6cad9b35db9f984c6b4bbb",
+                "url": "https://glape3333.github.io/mouth/repo/lib/org/ow2/asm/asm-util/9.7.1/asm-util-9.7.1.jar"
+              }
+            },
+            {
+              "id": "net.fabricmc:sponge-mixin:0.15.4+mixin.0.8.7",
+              "name": "Fabric (sponge-mixin)",
+              "type": "Library",
+              "artifact": {
+                "size": 1494834,
+                "MD5": "991ca8be2c408fe19eb64014d8a18243",
+                "url": "https://glape3333.github.io/mouth/repo/lib/net/fabricmc/sponge-mixin/0.15.4+mixin.0.8.7/sponge-mixin-0.15.4+mixin.0.8.7.jar"
+              }
+            },
+            {
+              "id": "net.fabricmc:intermediary:1.21.3",
+              "name": "Fabric (intermediary)",
+              "type": "Library",
+              "artifact": {
+                "size": 693060,
+                "MD5": "bc6edae1133bf23325898da22d9eff90",
+                "url": "https://glape3333.github.io/mouth/repo/lib/net/fabricmc/intermediary/1.21.3/intermediary-1.21.3.jar"
+              }
+            }
+          ]
+        },
+        {
+          "id": "me.shedaniel.autoconfig.example:cloth-config:16.0.143@jar",
+          "name": "Cloth Config v16",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 1150490,
+            "url": "https://glape3333.github.io/mouth/servers/mouth-1.21.3/fabricmods/required/cloth-config-16.0.143-fabric.jar",
+            "MD5": "780accf5d57c7b3cd3a40dc42fd3daea"
+          }
+        },
+        {
+          "id": "generated.fabricmod:fabric-api:0.114.0+1.21.3@jar",
+          "name": "Fabric API",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 2380570,
+            "url": "https://glape3333.github.io/mouth/servers/mouth-1.21.3/fabricmods/required/fabric-api-0.114.0+1.21.3.jar",
+            "MD5": "ff212ec689a11a0b4428b293013b7f4d"
+          }
+        },
+        {
+          "id": "generated.fabricmod:iris:1.8.1+mc1.21.3@jar",
+          "name": "Iris",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 2663618,
+            "url": "https://glape3333.github.io/mouth/servers/mouth-1.21.3/fabricmods/required/iris-fabric-1.8.1+mc1.21.3.jar",
+            "MD5": "1987e6badf2a780cac8d73a75613b2ae"
+          }
+        },
+        {
+          "id": "com.hyfata.najoan:koreanpatch:1.8.1+mc1.21.3@jar",
+          "name": "Korean Patch",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 3277511,
+            "url": "https://glape3333.github.io/mouth/servers/mouth-1.21.3/fabricmods/required/koreanpatch-fabric-1.8.1+mc1.21.3.jar",
+            "MD5": "7b46bccc5b256b7a4f77482b144873fb"
+          }
+        },
+        {
+          "id": "net.caffeinemc.mods:sodium:0.6.1+mc1.21.3@jar",
+          "name": "Sodium",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 1289984,
+            "url": "https://glape3333.github.io/mouth/servers/mouth-1.21.3/fabricmods/required/sodium-fabric-0.6.1+mc1.21.3.jar",
+            "MD5": "848de2edec7256c0ce2dbe2e61a0936c"
+          }
+        },
+        {
+          "id": "de.maxhenkel:voicechat:1.21.3-2.5.30@jar",
+          "name": "Simple Voice Chat",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 6612186,
+            "url": "https://glape3333.github.io/mouth/servers/mouth-1.21.3/fabricmods/required/voicechat-fabric-1.21.3-2.5.30.jar",
+            "MD5": "c0400cb0f64ebd3fa7a950e93c2a6373"
+          }
+        },
+        {
+          "id": "xaero.minimap:xaerominimap:24.6.2@jar",
+          "name": "Xaero's Minimap",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 1627490,
+            "url": "https://glape3333.github.io/mouth/servers/mouth-1.21.3/fabricmods/required/Xaeros_Minimap_24.6.2_Fabric_1.21.3.jar",
+            "MD5": "ed7f511e7ce4091dd2a967ba128e013a"
+          }
+        },
+        {
+          "id": "iris.properties",
+          "name": "iris.properties",
+          "type": "File",
+          "artifact": {
+            "size": 285,
+            "url": "https://glape3333.github.io/mouth/servers/mouth-1.21.3/files/config/iris.properties",
+            "MD5": "6caf4bfa4f8edf6f45ca6223708c305c",
+            "path": "config/iris.properties"
+          }
+        },
+        {
+          "id": "xaerominimap.txt",
+          "name": "xaerominimap.txt",
+          "type": "File",
+          "artifact": {
+            "size": 3641,
+            "url": "https://glape3333.github.io/mouth/servers/mouth-1.21.3/files/config/xaerominimap.txt",
+            "MD5": "5a89c4896e235e17836ce3c32720d1ae",
+            "path": "config/xaerominimap.txt"
+          }
+        },
+        {
+          "id": "options.txt",
+          "name": "options.txt",
+          "type": "File",
+          "artifact": {
+            "size": 5549,
+            "url": "https://glape3333.github.io/mouth/servers/mouth-1.21.3/files/options.txt",
+            "path": "options.txt"
+          }
+        },
+        {
+          "id": "ComplementaryUnbound_r5.1.1.zip",
+          "name": "ComplementaryUnbound_r5.1.1.zip",
+          "type": "File",
+          "artifact": {
+            "size": 409957,
+            "url": "https://glape3333.github.io/mouth/servers/mouth-1.21.3/files/shaderpacks/ComplementaryUnbound_r5.1.1.zip",
+            "MD5": "da7fc4c86b12e65f4f70b3a9aaabae90",
+            "path": "shaderpacks/ComplementaryUnbound_r5.1.1.zip"
+          }
+        },
+        {
+          "id": "ComplementaryUnbound_r5.1.1.zip.txt",
+          "name": "ComplementaryUnbound_r5.1.1.zip.txt",
+          "type": "File",
+          "artifact": {
+            "size": 52,
+            "url": "https://glape3333.github.io/mouth/servers/mouth-1.21.3/files/shaderpacks/ComplementaryUnbound_r5.1.1.zip.txt",
+            "MD5": "db598fc3c643c4487f77004b4e5e168d",
+            "path": "shaderpacks/ComplementaryUnbound_r5.1.1.zip.txt"
+          }
+        }
+      ]
+    }
+  ]
+}
